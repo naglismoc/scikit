@@ -48,6 +48,12 @@ y = data['mpg']
 
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.33,random_state=42)
 
+'''
+X_train: Contains 67% of the rows from X (feature columns like cylinders, displacement, etc.).
+y_train: Contains the corresponding mpg values (target) for the rows in X_train.
+X_test: Contains 33% of the rows from X, which will be used as input for prediction.
+y_test: Contains the mpg values corresponding to X_test, which the model will try to predict and compare against for evaluation.'''
+
 
 reg = LinearRegression().fit(x_train,y_train)
 
